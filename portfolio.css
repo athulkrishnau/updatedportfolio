@@ -1,0 +1,310 @@
+/* Reset margin and padding for all elements */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(''); /* Add background image URL if needed */
+    background-color: #618685; /* Background color */
+    background-size: cover; /* Cover the entire body */
+    background-position: center; /* Center the background */
+    background-repeat: no-repeat; /* No repeating */
+    position: relative; /* Create a positioning context for the absolute elements */
+}
+
+/* Header styling */
+header {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background for header */
+    color: rgb(255, 255, 255);
+    padding: 20px 0; /* Increased padding */
+    text-align: center;
+    height: 180px; /* Adjusted height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* To position logo absolutely */
+    background-image: url('black.jpg'); /* Add background image URL */
+    background-size: cover; /* Ensure the background image covers the header */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+header h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    font-size: 2.5em; /* Increased font size */
+    color: white;
+    animation: fadeIn 2s ease-out; /* Fade-in animation */
+    z-index: 1; /* Ensure it appears above the logo */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Initial position for a subtle slide effect */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End position */
+    }
+}
+
+/* Navigation styling */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center align navigation items */
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin: 0 20px; /* Increased margin for better spacing */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s, border-bottom 0.3s; /* Added border-bottom transition */
+    padding: 5px 0; /* Added padding for hover effect */
+}
+
+nav ul li a:hover {
+    color: #ddd;
+    border-bottom: 2px solid #ddd; /* Underline effect on hover */
+}
+
+/* Section styling */
+section {
+    padding: 60px 20px; /* Increased padding and added side padding */
+}
+
+/* Catchy content section styling */
+.catchy-content {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.catchy-content h2 {
+    font-size: 2.5em; /* Larger font size */
+    color: #333; /* Darker text color */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-out; /* Fade-in effect */
+}
+
+.catchy-content p {
+    font-size: 1.2em; /* Adjusted font size */
+    line-height: 1.6; /* Improved readability */
+    color: white; /* Slightly lighter text color */
+    max-width: 800px; /* Increase width for more space */
+    margin: 0 auto; /* Center align the paragraph */
+}
+
+/* About Me section styling */
+#about {
+    background-color: #618685;
+    text-align: center;
+    padding: 60px 20px; /* Increased padding */
+}
+
+#about h2 {
+    font-size: 2.5em; /* Larger font size */
+    margin-bottom: 30px; /* Increased bottom margin */
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center alignment */
+    gap: 40px; /* Adjusted gap */
+    color: white;
+    font-size: 1.2em; /* Adjusted font size */
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.about-content img {
+    width: 800px; /* Consistent width */
+    height: 400px; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 20px; /* Adjusted margin */
+}
+
+.about-content p {
+    max-width: 600px;
+    line-height: 1.7;
+    font-size: 1em; /* Adjusted font size */
+    color: black; /* Text color */
+}
+
+/* Container Wrapper Styling */
+.container-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px; /* Gap between items */
+    justify-content: center;
+    padding: 0 20px; /* Side padding */
+    color: #333;
+}
+
+/* Section container styles with specific images */
+.section-container {
+    width: 100%; /* Full width of grid item */
+    height: 300px; /* Fixed height */
+    background-color: rgba(255, 255, 255, 0.3); /* Reduced opacity background color */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Box shadow for hover effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black; /* Fully opaque text color */
+    font-weight: bold; /* Bold text */
+    transform: translateY(20px); /* Initial position */
+    animation: fadeInSlideIn 1s forwards; /* Apply animations */
+    background-size: cover; /* Ensure background image covers the container */
+    background-position: center; /* Center the background image */
+    position: relative; /* Position relative for the pseudo-element */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Glowing effect */
+}
+
+.section-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.3); /* Reduced opacity background color */
+    z-index: -1; /* Place it behind the content */
+    border-radius: 5px;
+}
+
+.section-container:hover {
+    transform: translateY(-10px); /* Slightly lift on hover */
+    background-color: rgba(144, 238, 144, 0.5); /* Mild green background on hover */
+}
+
+/* Fade-in slide-in animation */
+@keyframes fadeInSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Background images for specific sections */
+.about-img {
+    background-image: url('Myphoto.jpg'); /* Image for the About section */
+    
+}
+
+.education-img {
+    background-image: url('sri-krishna-college-of-technology-coimbatore-215488.jpg'); /* Image for the Education section */
+}
+
+.projects-img {
+    background-image: url('proimG.webp'); /* Image for the Projects section */
+}
+
+.contact-img {
+    background-image: url('contactpannu.jpg'); /* Image for the Contact section */
+}
+
+/* Footer styling */
+footer {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    margin-top: 20px; /* Added gap between footer and the content above */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+}
+
+.footer-left, .footer-right {
+    display: flex;
+    align-items: center;
+}
+
+.footer-right {
+    margin-top: 10px; /* Add margin for spacing */
+}
+
+.footer-left a, .footer-right a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold; /* Make footer links bold */
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-left: 10px;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.social-icons a:hover {
+    transform: scale(1.2); /* Zoom effect on hover */
+}
+
+.social-icons i {
+    font-size: 1.5em; /* Adjust size of social icons */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container-wrapper {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+
+    .about-content {
+        flex-direction: column; /* Stack image and text vertically on small screens */
+        align-items: center;
+    }
+
+    .about-content img {
+        width: 80%; /* Responsive image width */
+        height: auto; /* Auto height to maintain aspect ratio */
+    }
+
+    .footer-left, .footer-right {
+        flex-direction: column; /* Stack footer items vertically on small screens */
+        align-items: center;
+    }
+}

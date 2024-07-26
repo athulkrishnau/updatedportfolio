@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            background-color: #618685;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            animation: fadeIn 2s ease-out; /* Fade-in effect for header */
+            background-image: url('black.jpg');
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            animation: fadeIn 2s ease-out 0.5s forwards; /* Fade-in effect for navigation */
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ddd;
+        }
+
+        main {
+            margin-top: 20px;
+        }
+
+        section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            opacity: 0; /* Initially hidden */
+            animation: fadeIn 2s ease-out forwards; /* Fade-in effect for sections */
+        }
+
+        section h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            animation: fadeIn 2s ease-out 1s forwards; /* Delayed fade-in effect for section headings */
+        }
+
+        section p {
+            font-size: 1em;
+            line-height: 1.5;
+            margin-bottom: 10px;
+            animation: fadeIn 2s ease-out 1.2s forwards; /* Delayed fade-in effect for paragraphs */
+        }
+
+        .project, .internship {
+            margin-bottom: 20px;
+            opacity: 0; /* Initially hidden */
+            animation: fadeIn 2s ease-out forwards; /* Fade-in effect for projects and internships */
+        }
+
+        .project h3, .internship h3 {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+            animation: fadeIn 2s ease-out 1.4s forwards; /* Delayed fade-in effect for titles */
+        }
+
+        .project p, .internship p {
+            font-size: 1em;
+            line-height: 1.5;
+            margin-bottom: 10px;
+            animation: fadeIn 2s ease-out 1.6s forwards; /* Delayed fade-in effect for descriptions */
+        }
+
+        .project a, .internship a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .project a:hover, .internship a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px); /* Optional: adds a vertical slide effect */
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0); /* Optional: ends at the original position */
+            }
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .social-icons img {
+            width: 20px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>My Portfolio</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="education.html">Education</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Plot Gardens</h3>
+                <p>A web application to buy garden plots. This project is built using HTML and CSS. It features a user-friendly interface that allows users to browse and purchase plots easily.</p>
+                <p><a href="https://amazing-babka-f70b01.netlify.app/" target="_blank">View</a></p>
+            </div>
+            <div class="project">
+                <h3>Netflix Clone</h3>
+                <p>A Netflix clone built using React JS. This project replicates the user interface and core functionality of Netflix, allowing users to browse and watch movies and TV shows.</p>
+                <p><a href="404netflix.jpg" target="_blank">View</a></p>
+            </div>
+        </section>
+
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <p><a href="AWS.pdf" target="_blank">AWS Cloud Essentials</a></p>
+            <p><a href="WebDevelopmentFundamentals_Badge IBM.pdf" target="_blank">IBM Web Development Fundamentals</a></p>
+            <p><a href="TCS ESG certificate.pdf" target="_blank">TCS Certificate</a></p>
+            <!-- Add more certifications as needed -->
+        </section>
+
+        <section id="internships">
+            <h2>Internships</h2>
+            <div class="internship">
+                <h3>Internship at TCS</h3>
+                <p>Worked on developing and maintaining web applications using various technologies.</p>
+                <p><a href="TCS ESG certificate.pdf" >View</a></p>
+            </div>
+            <div class="internship">
+                <h3>Internship at SS Fastners</h3>
+                <p>Contributed to project management and participated in software development tasks.</p>
+                <p><a href="ssfastnersinternshil.pdf" >View</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Athul Krishna U</p>
+        <div class="social-icons">
+            <a href="mailto:your-email@example.com" target="_blank"><i class="fas fa-envelope"></i></a>
+            <a href="https://discord.com/invite/yourdiscord" target="_blank"><i class="fab fa-discord"></i></a>
+            <a href="https://www.instagram.com/yourusername" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/athul-krishna-139915258/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
